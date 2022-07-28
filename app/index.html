@@ -4,15 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header class="header"></header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img class="logo__img" src="images/header/header-logo.png" alt="logo">
+                </a>
+                <div class="header__schedule">
+                    Пн-Сб: c 10:00 до 20:00
+                    Выходной: воскресенье
+                </div>
+                <div class="header__layout-house">
+                    <p class="header__layout-house__text">
+                        Заказать ЗD-макет дома
+                    </p>
+                </div>
+                <div class="header__contacts">
+                    <a class="contacts__phone" href="tel:+79151685550">+7 (915) 168-55-50</a>
+                    <div class="contacts__social">
+                        <img class="contacts__social-img" src="images/header/social-icons/whatsapp.svg" alt="Social icons">
+                        <img class="contacts__social-img" src="images/header/social-icons/telegram.svg" alt="Social icons">
+                        <img class="contacts__social-img" src="images/header/social-icons/viber.svg" alt="Social icons">
+                    </div>
+                </div>
+                <button class="header__btn">Заказать звонок</button>
+            </div>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="#">Каталог домов</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="#">Услуги</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="#">О нас</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="#">Контакты</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="#">Блог</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="wrapper">
         <main class="main"></main>
         <footer class="footer"></footer>
     </div>
-
     <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -1,5 +1,19 @@
-@import 'vars';
-@import 'fonts';
 @import 'reset';
+@import 'vars';
 @import 'libs';
 @import 'global';
+
+.header {
+    &__inner {
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color-default;
+    }
+    &__schedule {
+        max-width: 190px;
+    }
+}
+
+@import 'media';
