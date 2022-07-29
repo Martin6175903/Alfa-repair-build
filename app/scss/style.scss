@@ -127,6 +127,7 @@
     }
     .menu {
         margin-top: 36px;
+        margin-bottom: 68px;
         background: linear-gradient(90deg, rgba(246, 246, 246, 0) 1.47%, rgba(163, 210, 155, 0.92) 7.25%, #319F1C 14.68%, #309E1B 50.68%, #319F1C 84.33%, rgba(147, 202, 137, 0.79) 91.68%, rgba(246, 246, 246, 0) 99.05%);
         border-radius: 3px;
         &__list {
@@ -211,6 +212,23 @@
             margin-bottom: 10px;
         }
     }
+    &__title {
+        @extend %ms-black;
+        font-size: 38px;
+        line-height: 52px;
+        color: $color-title;
+        margin-bottom: 20px;
+    }
+    &__text {
+        color: $color-default;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+.experience {
+
 }
 
 
