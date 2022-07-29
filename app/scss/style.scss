@@ -2,6 +2,7 @@
 @import 'vars';
 @import 'libs';
 @import 'global';
+@import 'animation';
 
 .header {
     &__inner {
@@ -10,10 +11,129 @@
         justify-content: space-between;
         align-items: center;
         color: $color-default;
+        font-weight: 500;
     }
     &__schedule {
         max-width: 190px;
     }
+    &__layout-house {
+        padding-left: 72px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 30px;
+            height: 26.25px;
+            background-image: url('../images/header/layout-house.svg');
+            position: absolute;
+            left: 17px;
+        }
+        &::after {
+            content: '';
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            border: 7px solid #E4E4E4;
+            border-radius: 50%;
+            left: 0;
+            top: -17px;
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 21px;
+            padding-bottom: 7px;
+            border-bottom: 1px solid #000;
+        }
+    }
+    &__contacts {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        width: 275px;
+        .contacts__box {
+            position: relative;
+            border: 7px solid #E4E4E4;
+            padding: 15px;
+            border-radius: 50%;
+            &::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                border: 1.5px solid #319F1C;
+                box-shadow: 0px 0px 12px #319F1C;
+                position: absolute;
+                left: 0;
+                top: 0;
+                border-radius: 50%;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 36px;
+                left: 36px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #319F1C;
+                /* задать анимацию «moving» к текущему элементу */
+                animation: rotate-box 3s infinite linear;
+                /* указать точку координат, вокруг которой будет вращаться объект */
+                transform-origin: -12px -12px;
+            }
+        }
+        .contacts__phone {
+            @extend %ms-bold;
+            font-size: 22px;
+            line-height: 27px;
+            color: #363130;
+        }
+        .contacts__social {
+            margin: 0 auto;
+            width: 126.52px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__btn {
+        color: #fff;
+        font-weight: 500;
+        padding: 22px 56px 23px 57px;
+        background: #319F1C;
+        box-shadow: 0px 4px 5px #319F1C;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+    }
+    .menu {
+        margin-top: 36px;
+        background: linear-gradient(90deg, rgba(246, 246, 246, 0) 1.47%, rgba(163, 210, 155, 0.92) 7.25%, #319F1C 14.68%, #309E1B 50.68%, #319F1C 84.33%, rgba(147, 202, 137, 0.79) 91.68%, rgba(246, 246, 246, 0) 99.05%);
+        border-radius: 3px;
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1074px;
+            margin: 0 auto;
+            height: 64px;
+            &-item {
+                display: flex;
+                align-items: center;
+                min-height: 100%;
+                padding-left: 25px;
+                padding-right: 25px;
+                cursor: pointer;
+                &:hover {
+                    transition: all .3s;
+                    background-color: #2a8318;
+                }
+            }
+            &-link {
+                font-weight: 500;
+                color: #fff;
+            }
+        }
+    }
 }
+
 
 @import 'media';
