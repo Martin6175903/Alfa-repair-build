@@ -228,6 +228,7 @@
 }
 
 .experience {
+    margin-bottom: 123px;
     &__items {
         display: flex;
         margin-top: 45px;
@@ -355,6 +356,10 @@
             background-repeat: no-repeat;
         }
     }
+}
+
+.cases {
+    
 }
 
 @import 'media';
