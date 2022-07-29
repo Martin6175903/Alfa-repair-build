@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,6 +14,7 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
+                <img class="header__cloud" src="images/page1/cloud.png" alt="Cloud">
                 <a class="logo" href="#">
                     <img class="logo__img" src="images/header/header-logo.png" alt="logo">
                 </a>
@@ -43,26 +45,83 @@
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Каталог домов</a>
+                        <a class="menu__list-link" href="#">Каталог домов
+                            <em class="fa fa-caret-down"></em>
+                        </a>
+                        <div class="dropdown-container">
+                            <a class="dropdown-container__link" href="#">Кейсы</a>
+                            <a class="dropdown-container__link" href="#">Видеоблог</a>
+                            <a class="dropdown-container__link" href="#">Полезные статьи</a>
+                        </div>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Услуги</a>
+                        <a class="menu__list-link" href="#">Услуги
+                            <em class="fa fa-caret-down"></em>
+                        </a>
+                        <div class="dropdown-container">
+                            <a class="dropdown-container__link" href="#">Кейсы</a>
+                            <a class="dropdown-container__link" href="#">Видеоблог</a>
+                            <a class="dropdown-container__link" href="#">Полезные статьи</a>
+                        </div>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">О нас</a>
+                        <a class="menu__list-link" href="#">О нас
+                            <em class="fa fa-caret-down"></em>
+                        </a>
+                        <div class="dropdown-container">
+                            <a class="dropdown-container__link" href="#">Видеоблог</a>
+                            <a class="dropdown-container__link" href="#">Полезные статьи</a>
+                            <a class="dropdown-container__link" href="#">Кейсы</a>
+                        </div>
                     </li>
                     <li class="menu__list-item">
                         <a class="menu__list-link" href="#">Контакты</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Блог</a>
+                        <a class="menu__list-link" href="#">Блог
+                            <em class="fa fa-caret-down"></em>
+                        </a>
+                        <div class="dropdown-container">
+                            <a class="dropdown-container__link" href="#">Кейсы</a>
+                            <a class="dropdown-container__link" href="#">Видеоблог</a>
+                            <a class="dropdown-container__link" href="#">Полезные статьи</a>
+                        </div>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="wrapper">
-        <main class="main"></main>
+        <main class="main">
+            <div class="container">
+                <div class="construction">
+                    <div class="construction__inner">
+                        <div class="construction__item">
+                            <img class="construction__item-img" src="images/page1/aside-icons/calculator.svg" alt="construction IMG">
+                        </div>
+                        <div class="construction__item">
+                            <img class="construction__item-img" src="images/page1/aside-icons/binoculars.svg" alt="construction IMG">
+                        </div>
+                        <div class="construction__item">
+                            <img class="construction__item-img" src="images/page1/aside-icons/compass.svg" alt="construction IMG">
+                        </div>
+                        <div class="construction__item">
+                            <img class="construction__item-img" src="images/page1/aside-icons/builder.svg" alt="construction IMG">
+                        </div>
+                    </div>
+                </div>
+                <section class="experience">
+                    <h1 class="main__title">
+                        Мы знаем о строительстве все, каждый 
+                        новый проект — это отдельная история
+                    </h1>
+                    <p class="main__text">
+                        Здесь мы делимся с вами историями, уникальным пытом, реальными кейсами и видео-обзорами.
+                        Это дает нам стимул развиваться и держать руку на пульсе, а вам позволяет наблюдать за нашими рабочими процессами и учиться вместе с нами. 
+                    </p>
+                </section>
+            </div>
+        </main>
         <footer class="footer"></footer>
     </div>
     <script src="js/main.min.js"></script>

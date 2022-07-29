@@ -12,6 +12,22 @@
         align-items: center;
         color: $color-default;
         font-weight: 500;
+        position: relative;
+        .header__cloud {
+            position: absolute;
+            right: -165px;
+            top: -10px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../images/page1/bg-house.jpg');
+            width: 1351px;
+            height: 861px;
+            z-index: -1;
+            top: -20px;
+            right: -320px;
+        }
     }
     &__schedule {
         max-width: 190px;
@@ -103,6 +119,11 @@
         border-radius: 6px;
         border: none;
         cursor: pointer;
+        z-index: 5;
+        &:hover {
+            transition: all .3s;
+            background-color: #2a8318;
+        }
     }
     .menu {
         margin-top: 36px;
@@ -122,15 +143,72 @@
                 padding-left: 25px;
                 padding-right: 25px;
                 cursor: pointer;
+                position: relative;
                 &:hover {
                     transition: all .3s;
                     background-color: #2a8318;
+                    .dropdown-container {
+                        display: block;
+                    }
+                }
+                .dropdown-container {
+                    display: none;
+                    position: absolute;
+                    bottom: -150px;
+                    right: -63.5px;
+                    width: 348px;
+                    height: 150px;
+                    background: #595959;
+                    border-radius: 0px 0px 3px 3px;
+                    padding-top: 25.68px;
+                    padding-left: 34px;
+                    padding-right: 39px;
+                    &__link {
+                        display: block;
+                        color: #fff;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid #fff;
+                        margin-bottom: 11px;
+                        &:hover {
+                            transition: all .3s;
+                            color: #3c972a;
+                        }
+                        &:last-child {
+                            border: none;
+                        }
+                    }
                 }
             }
             &-link {
+                position: relative;
                 font-weight: 500;
                 color: #fff;
+                .fa {
+                    margin-left: 10px;
+                }
             }
+        }
+    }
+}
+
+.main {
+    .construction {
+        position: relative;
+        &__inner {
+            position: absolute;
+            right: -165px;
+            top: 83px;
+        }
+        &__item {
+            width: 87px;
+            height: 64px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 3px 0px 0px 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
         }
     }
 }
