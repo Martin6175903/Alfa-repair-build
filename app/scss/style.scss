@@ -197,7 +197,7 @@
         position: relative;
         &__inner {
             position: absolute;
-            right: -165px;
+            right: -163px;
             top: 83px;
         }
         &__item {
@@ -228,8 +228,133 @@
 }
 
 .experience {
-
+    &__items {
+        display: flex;
+        margin-top: 45px;
+    }
+    &__item {
+        &:nth-child(1) {
+            margin-right: 102px;
+        }
+        &:nth-child(2) {
+            margin-right: 120px;
+        }
+        &:nth-child(3) {
+            width: 140px;
+            height: 125px;
+            .experience__item-caption {
+                transform: translateX(-20px);
+            }
+        }
+        &-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 88px;
+            height: 88px;
+            background: #FFFFFF;
+            border: 1px solid #319F1C;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            &:hover {
+                transition: border .2s;
+                border: 6px solid #319F1C;
+            }
+        }
+        .experience__item-inner:hover~.experience__item-caption {
+            font-weight: 600;
+        }
+        &-caption {
+            color: $color-default;
+            font-weight: 400;
+            margin-top: 18px;
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
 
+.consultation {
+    margin-top: 61px;
+    &__items {
+        display: flex;
+    }
+    &__input-name {
+        padding-top: 10px;
+        padding-left: 27px;
+        padding-bottom: 11px;
+        width: 238px;
+        margin-right: 29px;
+        background: #FFFFFF;
+        border: 1px solid #319F1C;
+        border-radius: 3px;
+        outline: none;
+        max-height: 40px;
+        &::placeholder {
+            font-family: 'Raleway';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $color-title;
+        }
+    }
+    &__input-phone {
+        padding-top: 10px;
+        padding-left: 26px;
+        padding-bottom: 11px;
+        width: 240px;
+        max-height: 40px;
+        margin-right: 30px;
+        background: #FFFFFF;
+        border: 1px solid #319F1C;
+        border-radius: 3px;
+        outline: none;
+        &::placeholder {
+            font-family: 'Raleway';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $color-title;
+        }
+    }
+    &__btn {
+        padding: 10px 24px 11px;
+        background: #319F1C;
+        box-shadow: 0px 4px 8px #64BC45;
+        border-radius: 3px;
+        border: none;
+        max-width: 238px;
+        color: #fff;
+        max-height: 40px;
+        cursor: pointer;
+    }
+    &__text {
+        margin-top: 22px;
+        color: $color-default;
+        margin-left: 28px;
+        position: relative;
+        &::before {
+            content: '';
+            background-image: url('../images/page1/shavings.png');
+            position: absolute;
+            width: 182.87px;
+            height: 140.2px;
+            transform: rotate(15deg);
+            bottom: -195px;
+            right: 535px;
+        }
+        &::after {
+            content: '';
+            background-image: url('../images/page1/cloud-2.png');
+            position: absolute;
+            width: 1031.37px;
+            height: 353.83px;
+            right: -600px;
+            bottom: -240px;
+            background-repeat: no-repeat;
+        }
+    }
+}
 
 @import 'media';
