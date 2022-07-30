@@ -359,7 +359,30 @@
 }
 
 .cases {
-    
+    margin-top: 123px;
+    &__slider {
+        margin-top: 60px;
+    }
+    &__items {
+
+    }
+    &__house {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-left: 23px;
+        border: 1px solid #319F1C;
+        border-radius: 3px;
+        width: 373px;
+        height: 60px;
+        &-img {
+            margin-right: 13px;
+        }
+        &-text {
+            color: $color-default;
+            font-weight: 400;
+        }
+    }
 }
 
 @import 'media';
