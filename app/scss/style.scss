@@ -362,9 +362,9 @@
     margin-top: 123px;
     &__slider {
         margin-top: 60px;
-    }
-    &__items {
-
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
     &__house {
         display: flex;
@@ -382,6 +382,24 @@
             color: $color-default;
             font-weight: 400;
         }
+    }
+}
+
+.slider__items {
+    position: relative;
+    max-width: 776px;
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        z-index: 10;
+    }
+    .slick-prev {
+        left: 38px;
+        bottom: 25px;
+    }
+    .slick-next {
+        bottom: 25px;
+        left: 121px;
     }
 }
 
