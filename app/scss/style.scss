@@ -375,12 +375,82 @@
         border-radius: 3px;
         width: 373px;
         height: 60px;
-        &-img {
-            margin-right: 13px;
+    }
+    &__house--active {
+        background-color: #319F1C;
+        color: #fff;
+    }
+    &__item-img {
+        margin-right: 13px;
+    }
+    &__item-text {
+        color: $color-default;
+        font-weight: 400;
+    }
+
+    &__house-info {
+        color: $color-default;
+        width: 372px;
+        padding-left: 37px;
+        & span {
+            font-weight: 500;
         }
-        &-text {
+        &__title {
+            @extend %ms-black;
+            font-size: 24px;
+            line-height: 29px;
+            color: $color-title;
+            margin-top: 35px;
+            text-align: center;
+        }
+        &__square {
+            margin-top: 31px;
+            margin-bottom: 32px;
+            .cases__house-info__modification {
+                display: inline-block;
+                padding-left: 21px;
+                font-size: 42px;
+                line-height: 51px;
+            }
+        }
+        &__items {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 37px;
+            padding-right: 35px;
+        }
+        &__modification {
+            @extend %ms-black;
+            color: #319F1C;
+        }
+        &__style {
+            margin-bottom: 42px;
+        }
+        &__price {
+            margin-bottom: 54px;
+            .cases__house-info__modification {
+                padding-left: 15px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+        }
+        &__link {
             color: $color-default;
-            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            margin-left: 38px;
+            position: relative;
+            text-decoration: underline;
+            &::after {
+                content: '';
+                width: 41px;
+                height: 10px;
+                background-image: url('../images/page2/arrow-right-link.svg');
+                background-repeat: no-repeat;
+                position: absolute;
+                right: -61px;
+                bottom: 2px;
+            }
         }
     }
 }
@@ -388,6 +458,19 @@
 .slider__items {
     position: relative;
     max-width: 776px;
+    width: 776px;
+    &::before {
+        content: '';
+        width: 208px;
+        height: 55px;
+        background: #F6F6F6;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 3px 15px 3px 30px;
+        position: absolute;
+        bottom: 3px;
+        left: -1px;
+        z-index: 10;
+    }
     .slick-prev,
     .slick-next {
         position: absolute;
