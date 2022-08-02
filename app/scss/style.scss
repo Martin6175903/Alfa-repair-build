@@ -360,11 +360,27 @@
 
 .cases {
     margin-top: 123px;
+    margin-bottom: 49px;
     &__slider {
         margin-top: 60px;
         display: flex;
         justify-content: space-between;
         width: 100%;
+        height: 435px;
+    }
+    &__houses {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -162px;
+            bottom: -407px;
+            width: 643px;
+            height: 844px;
+            background-image: url("../images/page2/foliage.png");
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
     }
     &__house {
         display: flex;
@@ -378,7 +394,12 @@
     }
     &__house--active {
         background-color: #319F1C;
-        color: #fff;
+        .cases__item-img > path {
+            fill: #fff;
+        }
+        .cases__item-text {
+            color: #fff;
+        }
     }
     &__item-img {
         margin-right: 13px;
@@ -392,6 +413,20 @@
         color: $color-default;
         width: 372px;
         padding-left: 37px;
+        background: #FFFFFF;
+        box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -120px;
+            right: -150px;
+            background-image: url('../images/page2/leaf.png');
+            background-repeat: no-repeat;
+            width: 196px;
+            height: 175px;
+        }
         & span {
             font-weight: 500;
         }
@@ -467,7 +502,7 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 3px 15px 3px 30px;
         position: absolute;
-        bottom: 3px;
+        bottom: -1px;
         left: -1px;
         z-index: 10;
     }
@@ -483,6 +518,69 @@
     .slick-next {
         bottom: 25px;
         left: 121px;
+    }
+}
+
+
+
+.footer {
+    background-color: $color-title;
+    padding-top: 50px;
+    padding-bottom: 63px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        &-btn {
+            padding: 22px 56px 23px 57px;
+            background-color: transparent;
+            font-weight: 500;
+            color: #fff;
+            border: 2px solid #FFFFFF;
+            border-radius: 6px;
+            cursor: pointer;
+            &:hover {
+                transition: all .5s;
+                background-color: #4d4a49;
+            }
+        }
+    }
+    &__logo-link {
+        margin-bottom: 52px;
+        display: block;
+    }
+    &__list {
+        &-item {
+            &:nth-child(odd) {
+                margin-bottom: 20px;
+            }
+            &:nth-child(even) {
+                margin-bottom: 21px;
+            }
+        }
+    }
+    &__item-link {
+        font-weight: 400;
+        color: #fff;
+    }
+    &__info {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: -11px;
+        &-logo {
+            margin-left: -7.2px;
+        }
+    }
+    &__social {
+        margin-top: 14px;
+        margin-bottom: 34px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 153px;
+        height: 26px;
     }
 }
 

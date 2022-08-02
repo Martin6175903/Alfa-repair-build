@@ -7,13 +7,33 @@
    });
 
 
-   window.onload = function () {
-      let sliderItemActiveBg = document.querySelector('.cases__house:first-of-type');
-      sliderItemActiveBg.classList.add(".cases__house--active");
-      let objStyles = {
-         background: '#319F1C',
-         color: '#fff',
-         fill: "white"
+$(".cases__item-img").each(function () {
+   var $img = $(this);
+   var imgClass = $img.attr("class");
+   var imgURL = $img.attr("src");
+
+   $.get(imgURL, function (data) {
+      var $svg = $(data).find("svg");
+
+      if (typeof imgClass !== "undefined") {
+         $svg = $svg.attr("class", imgClass + " replaced-svg");
       }
+
+      $svg = $svg.removeAttr("xmlns:a");
+
+      if (!$svg.attr("viewBox") && $svg.attr("height") && $svg.attr("width")) {
+         $svg.attr("viewBox", "0 0 " + $svg.attr("height") + " " + $svg.attr("width"))
+      }
+
+      $img.replaceWith($svg);
       
+   }, "xml");
+});
+
+window.onload = function () {
+   let sliderItemActiveBg = document.querySelector('.cases__house:first-of-type');
+   sliderItemActiveBg.classList.add("cases__house--active");
+   // sliderItemActiveBg.style.background = "#319F1C";
+   // sliderItemActiveBg.lastElementChild.style.color = '#fff';
 };
+
