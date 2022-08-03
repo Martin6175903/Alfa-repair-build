@@ -1,12 +1,3 @@
-
-   $(".slider__items").slick({
-      slidesToShow: 1,
-      infinite: false,
-      prevArrow: '<button type="button" class="slick-prev"><img class="slick-prev__img" src="images/page2/slider-arrow-left.svg" alt="Prev"></button>',
-      nextArrow: '<button type="button" class="slick-next"><img class="slick-next__img" src="images/page2/slider-arrow-right.svg" alt="Next"></button>'
-   });
-
-
 $(".cases__item-img").each(function () {
    var $img = $(this);
    var imgClass = $img.attr("class");
@@ -36,4 +27,22 @@ window.onload = function () {
    // sliderItemActiveBg.style.background = "#319F1C";
    // sliderItemActiveBg.lastElementChild.style.color = '#fff';
 };
+
+
+
+$(".slider__items").slick({
+      slidesToShow: 1,
+      infinite: false,
+      prevArrow: '<button type="button" class="slick-prev"><img class="slick-prev__img" src="images/page2/slider-arrow-left.svg" alt="Prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"><img class="slick-next__img" src="images/page2/slider-arrow-right.svg" alt="Next"></button>'
+});
+
+   $('[data-fancybox]').fancybox({
+      youtube : {
+         controls : 0,
+         showinfo : 0
+      }
+});
+
+
 
