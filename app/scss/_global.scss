@@ -7,22 +7,16 @@ body {
     line-height: 19px;
     color: #fff;
     overflow-x: hidden;
-    position: relative;
-    z-index: -10;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    position: relative;
-    z-index: -10;
 }
 
 .main {
     flex: 1 0 auto;
-    position: relative;
-    z-index: -10;
 }
 
 .footer {

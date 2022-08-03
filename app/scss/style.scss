@@ -22,6 +22,7 @@
             content: '';
             position: absolute;
             background-image: url('../images/page1/bg-house.jpg');
+            background-repeat: no-repeat;
             width: 1351px;
             height: 861px;
             z-index: -1;
@@ -210,6 +211,7 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 10px;
+            cursor: pointer;
         }
     }
     &__title {
@@ -329,6 +331,10 @@
         color: #fff;
         max-height: 40px;
         cursor: pointer;
+        &:hover {
+            transition: all .3s;
+            background-color: #3c812e;
+        }
     }
     &__text {
         margin-top: 22px;
@@ -391,9 +397,17 @@
         border-radius: 3px;
         width: 373px;
         height: 60px;
+        &:hover {
+            transition: all .5s;
+            background-color: #cec2c2;
+        }
     }
     &__house--active {
         background-color: #319F1C;
+        &:hover {
+            transition: all .3s;
+            background-color: #3c812e;
+        }
         .cases__item-img > path {
             fill: #fff;
         }
@@ -528,22 +542,6 @@
     background-repeat: no-repeat;
     padding-top: 118px;
     padding-bottom: 150px;
-    position: relative;
-    z-index: -5;
-    &__cloud {
-        position: relative;
-        &::before {
-            content: '';
-            width: 1239.89px;
-            height: 424.93px;
-            position: absolute;
-            background-image: url('../images/page3/cloud-1.png');
-            background-repeat: no-repeat;
-            left: -162px;
-            top: -200px;
-            z-index: -2;
-        }
-    }
     .popup {
         margin-top: 41px;
         display: flex;
@@ -656,48 +654,176 @@
             height: 100%;
             padding-left: 69px;
             padding-top: 93px;
-            padding-bottom: 83px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             background: rgba(0, 0, 0, 0.5);
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 3px;
             cursor: pointer;
-            &:hover ~ .articles__item-link {
-                .articles__item-link {
-                    display: block;
-                }
-            }
         }
         &-title {
             @extend %ms-bold;
             font-size: 24px;
             line-height: 29px;
+            margin-bottom: 73px;
+            height: 58px;
         }
         &-text {
             line-height: 22px;
+            margin-bottom: 27px;
             span {
                 font-weight: 400;
             }
         }
         &-link {
-            position: absolute;
-            bottom: 35px;
-            right: 105px;
             color: #fff;
             text-decoration: underline;
-            display: none;
+            display: block;
+            text-align: right;
+            margin-right: 105px;
+            position: relative;
             &::after {
                 content: '';
                 position: absolute;
-                width: 41px;
-                height: 10px;
-                bottom: 3px;
                 right: -64px;
+                top: 5px;
                 background-image: url('../images/page4/arrow-link.svg');
                 background-repeat: no-repeat;
+                width: 41px;
+                height: 10px;
             }
+        }
+    }
+    &__btn {
+        padding: 12px 23px;
+        color: #fff;
+        background: #319F1C;
+        box-shadow: 0px 4px 8px #64BC45;
+        border-radius: 3px;
+        border: none;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            transition: all .3s;
+            background-color: #3c812e;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -833px;
+            bottom: -300px;
+            background-image: url('../images/page4/cloud.png');
+            background-repeat: no-repeat;
+            width: 1410px;
+            height: 478px;
+            z-index: -1;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            bottom: -260px;
+            background-image: url('../images/page4/shavings.png');
+            background-repeat: no-repeat;
+            width: 188px;
+            height: 190px;
+            z-index: 15;
+        }
+    }
+}
+
+.cooperation {
+    &__inner {
+        float: right;
+        color: $color-default;
+        margin-right: 100px;
+        margin-bottom: 115px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -116px;
+            left: -1105px;
+            background-image: url('../images/page5/page5-bg.jpg');
+            background-repeat: no-repeat;
+            width: 1090px;
+            height: 600px;
+            z-index: -2;
+            border: none;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -705px;
+            background-image: url('../images/page5/tree.png');
+            background-repeat: no-repeat;
+            width: 836px;
+            height: 836px;
+            z-index: -2;
+            mask-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.53) 100%);
+        }
+    }
+    &__title {
+        @extend %ms-black;
+        font-size: 32px;
+        line-height: 52px;
+        color: #2E2C2C;
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    &__form {
+        margin-top: 47px;
+        width: 507px;
+    }
+    .form__firstname,
+    .form__tel {
+        height: 45px;
+    }
+    .form__firstname,
+    .form__tel,
+    .form__textarea {
+        display: block;
+        width: 100%;
+        padding-left: 30px;
+        background: #FFFFFF;
+        border: 1px solid #319F1C;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        outline: none;
+    }
+    .form__textarea {
+        padding-top: 13px;
+        height: 98px;
+        margin-bottom: 32px;
+        resize: none;
+    }
+    .form__btn {
+        background: #319F1C;
+        border-radius: 3px;
+        color: #fff;
+        padding: 13px 78px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            transition: all .3s;
+            background-color: #3c812e;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 215px;
+            height: 203px;
+            bottom: -75px;
+            right: -410px;
+            z-index: -2;
+            background-image: url('../images/page5/helmet.png');
+            background-repeat: no-repeat;
         }
     }
 }
