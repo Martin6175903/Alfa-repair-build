@@ -28,14 +28,39 @@ window.onload = function () {
    // sliderItemActiveBg.lastElementChild.style.color = '#fff';
 };
 
-
-
 $(".slider__items").slick({
-      slidesToShow: 1,
-      infinite: false,
-      prevArrow: '<button type="button" class="slick-prev"><img class="slick-prev__img" src="images/page2/slider-arrow-left.svg" alt="Prev"></button>',
-      nextArrow: '<button type="button" class="slick-next"><img class="slick-next__img" src="images/page2/slider-arrow-right.svg" alt="Next"></button>'
+   slidesToShow: 1,
+   infinite: false,
+   prevArrow: '<button type="button" class="slick-prev"><img class="slick-prev__img" src="images/page2/slider-arrow-left.svg" alt="Prev"></button>',
+   nextArrow: '<button type="button" class="slick-next"><img class="slick-next__img" src="images/page2/slider-arrow-right.svg" alt="Next"></button>'
 });
+
+document.querySelector('.cases__houses').addEventListener('click', function(event) {
+   let target = event.target;
+
+   if (target.tagName == 'DIV') return 0;
+   if (target.tagName != 'BUTTON') target = target.parentElement;
+   if (target.tagName != 'BUTTON') target = target.parentElement;
+   if (target.classList.contains('cases__house--active')) return 0;
+
+   let itemCase = document.querySelectorAll('.cases__house');
+   let targetIndex;
+
+   for (let i = 0; i < itemCase.length; i++) {
+      if (itemCase[i].classList.contains('cases__house--active')) {
+         itemCase[i].classList.remove('cases__house--active');
+         target.classList.add('cases__house--active');
+      }
+      if (itemCase[i].classList.contains('cases__house--active')) {
+         targetIndex = i;
+      }
+   }
+   console.log(targetIndex);
+   $('.slider__items').slick('slickGoTo', targetIndex);
+});
+
+
+
 
    $('[data-fancybox]').fancybox({
       youtube : {
