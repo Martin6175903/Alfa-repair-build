@@ -1,3 +1,4 @@
+
 $(".cases__item-img").each(function () {
    var $img = $(this);
    var imgClass = $img.attr("class");

@@ -1,0 +1,25 @@
+@media (max-width: 1400px) {
+    .header {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            order: 1;
+            flex-basis: 33%;
+        }
+        &__schedule {
+            order: 4;
+            flex-basis: 33%;
+        }
+        &__layout-house {
+            order: 2;
+        }
+        &__contacts {
+            order: 5;
+        }
+        &__btn {
+            order: 3;
+        }
+    }
+
+}
